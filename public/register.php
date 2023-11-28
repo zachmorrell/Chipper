@@ -27,7 +27,7 @@
 			$db=null;
 		} else ?>
 <div class="container mt-3" id="create">
-  	<form action="index.php?page=createanaccount" method="post">
+  	<form action="index.php?page=register" method="post">
 		<fieldset style="border: 1px solid black;border-radius:10px;background-color:bisque;">
 	  		<h2 style="margin:10px;text-align:center;">Create Account</h2>
     			<div class="mb-3 mt-3" style="margin:10px;width:75%;">
