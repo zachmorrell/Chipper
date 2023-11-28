@@ -1,0 +1,79 @@
+Created chipperDB - T.B 10/19/23
+Updated fixing likedContent table issues - T.B 10/20/23
+Updated adding contentName so users can name their meme or card - T.B 10/20/23
+
+Structured project - Z.M. 10/25/23
+	project chipper
+		config (database and database connection php files)
+			chipper_db
+				chipper_db.accdb
+				changelog(original)			
+		public (HTML web application)
+			(Original structure sent by Christian)
+		changelog(shortcut)
+Project Chipper\public\createanaccount.php - Z.M. 10/25/23
+	change references of lname, fname, pwd to lastName, firstName, password.
+	implemented account creation code after <form> through php.
+Project Chipper\config\chipper_db\chipper_dp.accdb - Z.M. 10/25/23
+	Added the index: Yes (repeat NO) to username and email. This is to prevent duplicates.
+Project Chipper\public\createanaccount.php - Z.M. 10/26/23
+	Cleaned account creation code, commented, and applied unique checks for username and email.
+
+Project Chipper\public\session.php - Z.M. 10/26/23
+	Created a php file to keep track of sessions
+
+Project Chipper\public\login.php - 10/26/23 -Z.M.
+	Began working on the login tracking. Time for bed.
+
+Project Chipper\public\generator.php - 11/22/23 - Z.M. 
+	Rewrote meme generator.
+	Implemented completed meme upload.
+		~Also must be logged in to upload an image.
+
+	Added multiple text inserts.
+	Added click-drag to move text.
+	Added content naming of creations.
+
+Project Chipper\public\assets\scripts - 11/22/23 - Z.M.
+	created scripts directory.
+	javascript related to generator placed in generator.php to alleviate the main display page.
+
+Project Chipper\public\assets\scripts\upload.php -11/22/23 - Z.M.
+	Created and implemented code to upload user created meme images to database and img folder.
+
+Project Chipper\public\images - 11/22/23 - Z.M.
+	added directory for user image uploads.
+
+Project Chipper\public\card_generator.php - 11/22/23 - Z.M.
+	Reworked php page for card generator.
+
+Project Chipper\public\assets\scripts\card_generator.php - 11/22/23 - Z.M.
+	Implemented support for img canvas
+		implemented custom images
+	Implemented support for txt canvas
+		implemented typing to canvas
+		implemented text wrapping canvas
+
+Project Chipper\public\assets\scripts\card_generator.php -11/23/23 - Z.M.
+	Corrected some issues with the text canvas
+	Implemented canvas combining.
+	Implemented image upload.
+	Implemented saving reference to database.
+
+Project Chipper\public\populargenerated.php - 11/23/23 - Z.M.
+	Rebuilt carousel to display user content, randomly.
+
+Project Chipper\public\.. - 11/23/23 - Z.M.
+	Renamed generators, creations, and aobut us page.
+	Rebuilt home page.
+	Rebuilt navigation bar.
+
+Project Chipper\public\assets\scriptslogout.php - 11/23/23 - Z.M.
+	Destroys session to logout.
+	redirects to homepage after logging out.
+
+Project Chipper\public\login.php - 11/23/23 - Z.M.
+	Redirects to home page after logging in.
+
+Project Chipper\public\assets\card_generator.php - 11/26/23 - Z.M.
+	Allow a user to cycle through team created templates.

@@ -1,0 +1,32 @@
+~Rewrite Navigation bar
+    DONE`Properly highlight the current page.
+    DONE`Link login page.
+    DONE`Link Logout.
+
+~Meme Generator
+    DONE-`Require a content name from creator.
+
+~Card Generator
+    DONE`Select image for card
+    DONE`Dynamically update a canvas showing card on one side and input text on the other.
+    DONE`Word wrapping.. what a pain.
+    DONE`Upload canvas as img to images/user_images directory
+    DONE`Insert into DB
+
+~populargenerated
+    DONE`Load content from tblimages.
+    DONE`Update popularcontent.
+
+~AFTER UPLOADING GENERATED CONTENT
+    `forward user to a preview page to preview their creation.
+
+~Database changes
+    DONE`No longer store uploaded template images only created content.
+    Might end up using`Remove from tblimages description.
+    DONE`Delete tblGeneratedContent
+
+~Webpage
+    DONE`Logout webpage.
+
+## Maybe. ##
+    DONE`Change top content to community content.
