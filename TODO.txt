@@ -1,3 +1,16 @@
+~ REQ:
+    `Administrator panel
+
+~ LAST MINUTE PLANS OR PLANS TO COMPLETE PROJECT FOR SYMPOSIUM 
+    `Redirect to creation after upload.
+    `Creations page to allow users to download creations.
+    `Community creations page to display all creations, 10 per page.
+
+    `Font selection on meme and card page
+
+    `Most likely clear the database of current creations.. or test creations.
+
+
 ~Rewrite Navigation bar
     DONE`Properly highlight the current page.
     DONE`Link login page.

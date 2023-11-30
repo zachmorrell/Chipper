@@ -134,6 +134,7 @@ function combine_and_save_canvas() {
 
     const content_name = document.getElementById('content_name').value;
     const is_meme = 0;
+    alert("variables set");
 
     var combined_canvas = document.createElement('canvas');
     var combined_context = combined_canvas.getContext('2d');
@@ -144,16 +145,17 @@ function combine_and_save_canvas() {
     // Set background color for the combined canvas
     combined_context.fillStyle = 'white';
     combined_context.fillRect(0, 0, combined_canvas.width, combined_canvas.height);
+    alert("fill style");
 
     // Draw the image canvas
     combined_context.drawImage(img_canvas, 0, 0);
+    alert("img canvas drawn");
 
     // Draw the text canvas
     combined_context.drawImage(txt_canvas, img_canvas.width, 0);
+    alert("txt canvas drawn");
 
     const imageData = combined_canvas.toDataURL("image/png");
-    alert("Attempting to " + option + " content.");
-    if (option === "upload") {
         fetch('assets/scripts/upload.php', {
             method: 'POST',
             headers: {
@@ -167,6 +169,5 @@ function combine_and_save_canvas() {
                 console.log(response);
             })
             .catch(error => console.error('Error:', error));
-    }
 }
 </script>
