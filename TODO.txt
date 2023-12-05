@@ -1,5 +1,5 @@
 ~ REQ:
-    `Administrator panel
+    DONE`Administrator panel
 
 ~ LAST MINUTE PLANS OR PLANS TO COMPLETE PROJECT FOR SYMPOSIUM 
     `Redirect to creation after upload.
