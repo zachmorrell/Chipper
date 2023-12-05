@@ -1545,6 +1545,18 @@ input, select, textarea {
 		table thead {
 			border-bottom: solid 2px #dddddd;
 		}
+		.red {
+			background-color:rgb(194, 93, 93);
+		}
+		.red:hover {
+			background-color: rgba(93, 158, 93, .5);
+		}
+		.green {
+			background-color:rgb(93, 158, 93);
+		}
+		.green:hover {
+			background-color:rgba(194, 93, 93,.5);
+		}
 
 /* Section/Article */
 

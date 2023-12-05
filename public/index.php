@@ -65,6 +65,9 @@
 				$webpageslist[] = ["register", "Register"];
 			} else {
 				$webpageslist[] = ["assets/scripts/logout", "Log Out"];
+				if($_SESSION['role']=="admin") {
+					$webpageslist[] = ["admin", "Admin"];
+				}
 			}
 		?>
 	</head>
@@ -96,17 +99,20 @@
 
 			</section>
 			<?php
+				// If the GET of page is set
 				if (isset($_GET['page'])) {
 					$page = $_GET['page'];
-					include(in_webpage_list($page, $webpageslist).'.php');
+					// By default returns 404.php, but if the page exists in webpagelist it'll return the php document to be included.
+					include(get_page_from_list($page, $webpageslist).'.php');
 				} else {
 					include("home.php");
 				}
-			function in_webpage_list($query, $list) {
+			// Function to return the webpage if it is whitelisted or 404 if it is not whitelisted.
+			function get_page_from_list($query, $list) {
 				foreach($list as $sub_array) {
-					if(in_array($query, $sub_array)) {
+					if($sub_array[0] == $query) {
 						return $sub_array[0];
-					}					
+					}
 				}
 				return '404';
 			}

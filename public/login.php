@@ -27,6 +27,8 @@
 							// set session username to stored username to tell the browser we are logged in.
 							// Should maybe refresh or redirect the webpage.
 							$_SESSION['username'] = $username;
+							$_SESSION['role'] = $row[0]['role'];
+							$_SESSION['user_id'] = $row[0]['userID'];
 							header('location:index.php?=home');
 						} else {
 							echo '<script>alert("Passwords do not match.");</script>';
