@@ -104,10 +104,10 @@ input, select, textarea {
 		box-sizing: inherit;
 	}
 
-	body {
+	/*body {
 		background: #252122;
 		background-image: url("images/bg02.png");
-	}
+	}*/
 
 		body.is-preload *, body.is-preload *:before, body.is-preload *:after {
 			-moz-animation: none !important;
@@ -1545,6 +1545,7 @@ input, select, textarea {
 		table thead {
 			border-bottom: solid 2px #dddddd;
 		}
+	/* Related to Admin Table */
 		.red {
 			background-color:rgb(194, 93, 93);
 		}
@@ -1556,6 +1557,30 @@ input, select, textarea {
 		}
 		.green:hover {
 			background-color:rgba(194, 93, 93,.5);
+		}
+
+		.admin_nav {
+			position:sticky;
+			top: 50%;
+			left:0;
+			width:10%;
+			font-size: 20px;
+		}
+		.admin_nav ul {
+			list-style: none;
+		}
+		.admin_nav ul li {
+			height: 35px;
+			margin-top: 5px;
+		}
+		.admin_nav ul li a {
+			text-decoration: none;
+			height: 25px;
+			width: 25px;
+			color:#5d5d5d;
+		}
+		.admin_nav ul li:hover {
+			background-color: #f3f3f3;
 		}
 
 /* Section/Article */
@@ -2310,7 +2335,7 @@ input, select, textarea {
 			top: 0;
 			left: 0;
 			width: 100%;
-			background: url("images/bg01.png");
+			/*background: url("images/bg01.png");*/
 			background-size: 100% 100%;
 			z-index: 0;
 			opacity: 0.1;
@@ -2334,7 +2359,7 @@ input, select, textarea {
 			top: 0;
 			left: 0;
 			width: 100%;
-			background: url("images/bg01.png");
+			/*background: url("images/bg01.png");*/
 			background-size: 100% 100%;
 			z-index: 0;
 			opacity: 0.5;

@@ -76,16 +76,18 @@
             if($restriction == 1) {
                 $class = 'red';
             }
-            echo "
-            <tr class=$class>
-                <td>$id</td>
-                <td>$username</td>
-                <td>$first_name</td>
-                <td>$last_name</td>
-                <td>$email</td>
-                <td>$restriction</td>
-                <td>$role</td>
-            </tr>";
+            if($role == 'User') {
+                echo "
+                <tr class=$class>
+                    <td>$id</td>
+                    <td>$username</td>
+                    <td>$first_name</td>
+                    <td>$last_name</td>
+                    <td>$email</td>
+                    <td>$restriction</td>
+                    <td>$role</td>
+                </tr>";
+            }
         }
         ?>
 
@@ -132,7 +134,7 @@
 
             hiddenTd.textContent = content_hidden;
 
-            update_database([{id: firstTd, hidden: content_hidden}]);
+            update_database({"task": "images", "id": firstTd, "hidden": content_hidden});
         }
     });
     document.getElementById('users_table').addEventListener('click', function (e) {
@@ -150,21 +152,23 @@
 
             // Get the first td of the row
             var firstTd = parseInt(tds[0].textContent);
-            var hiddenTd = tds[5]
-            var content_hidden = parseInt(hiddenTd.textContent);
+            var restricted_td = tds[5]
+            var role_value = tds[6].textContent;
+            var restricted_value = parseInt(restricted_td.textContent);
             
             // Open a view of the content based on row clicked and allow the admin to hide or unhide content.
-            if(content_hidden == 0) {
-                content_hidden = 1;
+            if(restricted_value == 0) {
+                restricted_value = 1;
                 row.className = 'red';
             } else {
-                content_hidden = 0;
+                restricted_value = 0;
                 row.className = 'green';
             }
 
-            hiddenTd.textContent = content_hidden;
+            restricted_td.textContent = restricted_value;
 
-            //update_database([{id: firstTd, hidden: content_hidden}]);
+            // id, restriction, and role
+            update_database({"task": "users", "id": firstTd, "restriction": restricted_value, "role": role_value});
         }
     });
 
